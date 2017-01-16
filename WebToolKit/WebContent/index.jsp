@@ -8,10 +8,43 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Ping Tool</title>
+<style type="text/css">
+body{
+    margin:0px;
+   
+}
+.header-cont {
+    width:100%;
+    position:fixed;
+    top:0px;
+}
+.header {
+    height:50px;
+    background:#F0F0F0;
+    border:1px solid #CCC;
+    width:960px;
+    margin:0px auto;
+    color: #7aa4d3;
+}
+.content {
+    width:960px;
+    background: #F0F0F0;
+    border: 1px solid #CCC;
+    height: 500px;
+    margin: 70px auto;
+}
+</style>
+
 </head>
 <body>
-<center><h1>Ping Tool</h1>
+<div class="header-cont">
+<div class="header">
+<center><h2>Ping Tool</h2></center>
+</div> </div>
+    <div class ="content">
 
+<center>
+<br><br><br><br>
 <form name="myForm" target="res">
        <input type="text" name="address" /> 
         <input type="submit" value="Ping now"/>
@@ -19,7 +52,7 @@
     
  
 
-<br><br><br><br>
+<br><br>
 
 <form name="result" id="res" >
 <textarea rows="20" cols="70">
@@ -41,6 +74,6 @@ out.println(line);
 </textarea>
 </form>
 
-</center>
+</center></div>
 </body>
 </html>
