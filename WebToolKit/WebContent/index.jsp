@@ -16,13 +16,15 @@
        <input type="text" name="address" /> 
         <input type="submit" value="Ping now"/>
     </form>
+    
+ 
 
 <br><br><br><br>
 
 <form name="result" id="res" >
 <textarea rows="20" cols="70">
 <%
-String cmd = "dig " + request.getParameter("address");  
+String cmd = "ping " + request.getParameter("address") + " -c 4";  
 if (cmd.contains(".")){
 Runtime run = Runtime.getRuntime(); 
 Process pr = run.exec(cmd); 
