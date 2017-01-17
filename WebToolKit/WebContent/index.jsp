@@ -39,40 +39,20 @@ body{
 <body>
 <div class="header-cont">
 <div class="header">
-<center><h2>Ping Tool</h2></center>
+<center><h2>Web Tool Kit</h2></center>
 </div> </div>
     <div class ="content">
 
 <center>
 <br><br><br><br>
-<form name="myForm" target="res">
-       <input type="text" name="address" value="10.77.24.1"/> 
-        <input type="submit" value="Ping now" onclick="res"/>
+<h3>Access your Tools Here:</h3>
+<form name="myForm" action="ping.jsp"> 
+        <input type="submit" value="Ping Tool"/>
     </form>
     
  
 
 <br><br>
-
-<form name="result" id="res" >
-<textarea rows="20" cols="70">
-<%
-String cmd = "ping " + request.getParameter("address") + " -n 4";  
-if (cmd.contains(".")){
-Runtime run = Runtime.getRuntime(); 
-Process pr = run.exec(cmd); 
-pr.waitFor();
-BufferedReader buf = new BufferedReader(new InputStreamReader(pr.getInputStream())); 
-String line = ""; 
-
-while ((line=buf.readLine())!=null) { 
-	
-out.println(line);
-	}
-}
-%>
-</textarea>
-</form>
 
 </center></div>
 </body>
