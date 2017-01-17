@@ -57,7 +57,7 @@ body{
 <form name="result" id="res" >
 <textarea rows="20" cols="70">
 <%
-String cmd = "ping " + request.getParameter("address") + " -n 4";  
+String cmd = "ping " + request.getParameter("address") + " -c 4";  
 if (cmd.contains(".")){
 Runtime run = Runtime.getRuntime(); 
 Process pr = run.exec(cmd); 
