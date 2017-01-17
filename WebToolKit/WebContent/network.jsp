@@ -45,22 +45,23 @@ body{
 <center><h2>Port Scanning Tool</h2></center>
 </div> </div>
     <div class ="content">
+
 <center>
 <br><br>
-<h3>Kindly provide only the CUCM IP address in the below textbox. Thank you!</h3>
-<form name="myForm">
-       <input type="text" name="address" placeholder="10.77.45.1"/> 
-        <input type="submit" value="Scan Ports Now" onclick="res"/>
+<h3>Kindly provide the network address (Ex: 192.168.1.0/24). Thank you!</h3>
+<form name="myForm" >
+       <input type="text" name="address" placeholder="192.168.1.0/24"/> 
+        <input type="submit" value="Start network scan now" onclick="netRes"/>
     </form>
     
  
 
 <br><br>
 
-<form name="result" id="res" >
+<form name="result" id="netRes" >
 <textarea rows="20" cols="70">
 <%
-String cmd = "nmap  -n -vvv -sT " + request.getParameter("address") + " -p 1-65535";  
+String cmd = "nmap -sP " + request.getParameter("address");  
 if (cmd.contains(".")){
 Runtime run = Runtime.getRuntime(); 
 Process pr = run.exec(cmd); 

@@ -7,6 +7,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
 <title>Ping Tool</title>
 <style type="text/css">
 body{
@@ -44,8 +47,10 @@ body{
     <div class ="content">
 
 <center>
-<br><br><br><br>
-<form name="myForm" target="res">
+<br><br>
+<h3>Kindly provide the IP address below. Thank you!</h3>
+
+<form name="myForm">
        <input type="text" name="address" placeholder="10.77.45.1"/> 
         <input type="submit" value="Ping now" onclick="res"/>
     </form>
