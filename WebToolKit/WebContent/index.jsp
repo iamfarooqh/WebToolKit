@@ -46,8 +46,8 @@ body{
 <center>
 <br><br><br><br>
 <form name="myForm" target="res">
-       <input type="text" name="address" /> 
-        <input type="submit" value="Ping now"/>
+       <input type="text" name="address" value="10.77.24.1"/> 
+        <input type="submit" value="Ping now" onclick="res"/>
     </form>
     
  
@@ -57,7 +57,7 @@ body{
 <form name="result" id="res" >
 <textarea rows="20" cols="70">
 <%
-String cmd = "ping " + request.getParameter("address") + " -c 4";  
+String cmd = "ping " + request.getParameter("address") + " -n 4";  
 if (cmd.contains(".")){
 Runtime run = Runtime.getRuntime(); 
 Process pr = run.exec(cmd); 
