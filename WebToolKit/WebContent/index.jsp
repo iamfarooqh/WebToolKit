@@ -27,7 +27,11 @@ body{
     border:1px solid #CCC;
     width:960px;
     margin:0px auto;
-    color: #7aa4d3;
+    color: blue;
+    text-align: center;
+    font-weight:bold;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
 }
 .content {
     width:960px;
@@ -84,7 +88,7 @@ body{
 <body>
 <div class="header-cont">
 <div class="header">
-<center><h2>Web Tool Kit</h2></center>
+<h2>Web Tool Kit</h2>
 </div> </div>
     <div class ="content">
 <%        

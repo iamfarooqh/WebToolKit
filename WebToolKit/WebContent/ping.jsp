@@ -36,6 +36,9 @@ body{
     height: 500px;
     margin: 70px auto;
 }
+a {
+text-align: center;
+}
 </style>
 
 </head>
@@ -45,14 +48,15 @@ body{
 <center><h2>Ping Tool</h2></center>
 </div> </div>
     <div class ="content">
-
+<a href="index.jsp">Home</a>
 <center>
 <br><br>
 <h3>Kindly provide the IP address below. Thank you!</h3>
 
 <form name="myForm">
-       <input type="text" name="address" placeholder="10.77.45.1"/> 
+       <input type="text" name="address" placeholder="10.77.45.1" required/> 
         <input type="submit" value="Ping now" onclick="res"/>
+        
     </form>
     
  

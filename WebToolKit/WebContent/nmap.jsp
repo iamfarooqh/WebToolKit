@@ -49,7 +49,7 @@ body{
 <br><br>
 <h3>Kindly provide only the CUCM IP address in the below textbox. Thank you!</h3>
 <form name="myForm">
-       <input type="text" name="address" placeholder="10.77.45.1"/> 
+       <input type="text" name="address" placeholder="10.77.45.1" required/> 
         <input type="submit" value="Scan Ports Now" onclick="res"/>
     </form>
     
